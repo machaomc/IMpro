@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <AVOSCloud/AVOSCloud.h>
 @interface ViewController ()
 
 @end
@@ -17,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"run");
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 40)];
+    view.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view];
+    
+    
+    AVObject *testObject = [AVObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar1" forKey:@"foo"];
+    [testObject save];
+    
 }
 
 

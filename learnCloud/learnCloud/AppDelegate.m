@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import <AVOSCloud/AVOSCloud.h>
+#import "ViewController.h"
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,7 +19,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [AVOSCloud setApplicationId:@"xi0dr3zIUEnOuKJ20EMxEam1-gzGzoHsz" clientKey:@"VXbPsGNm0bl9ckLTWtjq0dn1"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    self.window.rootViewController = [[ViewController alloc]init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
+}
+
+- (UIWindow *)window
+{
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _window.backgroundColor = [UIColor whiteColor];
+    }
+    return _window;
 }
 
 

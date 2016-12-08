@@ -108,6 +108,7 @@
 		04DBE9FC1DF912B70074B927 /* learnCloud */ = {
 			isa = PBXGroup;
 			children = (
+				04DBEA301DF93D9B0074B927 /* BaseControllers */,
 				04DBEA001DF912B70074B927 /* AppDelegate.h */,
 				04DBEA011DF912B70074B927 /* AppDelegate.m */,
 				04DBEA031DF912B70074B927 /* ViewController.h */,
@@ -145,6 +146,13 @@
 				04DBEA241DF912B70074B927 /* Info.plist */,
 			);
 			path = learnCloudUITests;
+			sourceTree = "<group>";
+		};
+		04DBEA301DF93D9B0074B927 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseControllers;
 			sourceTree = "<group>";
 		};
 		5B013DD6CAE188F61B5D0020 /* Pods */ = {
